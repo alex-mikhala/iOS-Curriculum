@@ -38,7 +38,7 @@ This will be a quick introduction into how to write Swift code.
 
 First let's open a **Playground** in Xcode. Playgrounds is a development environment for Swift created by Apple. It allows you to write code and see it in action immediately.
 
-You can open a **Playground** by opening Xcode and selecting the open _Get started with a playground_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
+You can open a **Playground** by opening Xcode and selecting the _Get started with a playground_ option in the **Welcome to Xcode** window (if it doesn't show up, press <kbd>cmd</kbd> + <kbd>shift</kbd> + <kbd>1</kbd> to bring it up).
 
 In the window that appears, select a **blank iOS template**, give your playground a name, and then press next.
 
@@ -71,11 +71,11 @@ Swift, like any other programming language uses datatypes and variables. Swift i
 A **datatype** is a particular type of data item, defined by:
 
 - the values it can take
-- the operations that can be performed by it
+- the operations it can perform
 
 A **variable** is an instance of a datatype, often given a descriptive name.
 
-Datatypes and variables are the tools used by programmers to solve larger problems, and in order to know which tools is best for a given problem, you need to understand the strengths and weaknesses of each datatype.
+Datatypes and variables are the tools used by programmers to solve larger problems. In order to know which tools are best for a given problem, you need to understand the strengths and weaknesses of each datatype.
 
 In this workshop we will only cover a few of the basic datatypes in Swift such as:
 
@@ -86,15 +86,15 @@ In this workshop we will only cover a few of the basic datatypes in Swift such a
 - `Array` (ordered list)
 - `Dictionary` (list with key + value pairs)
 
-For more informations read [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html), from the Swift Organization.
+For more information read [The Basics](https://docs.swift.org/swift-book/LanguageGuide/TheBasics.html), from the Swift Organization.
 
 ## Declarations
 
-In order to create a datatype we must declare it. If we don't declare it and try to use it, Xcode will complain telling you **Use of unresolved identifier 'x'** (where x is the variable name).
+To create a datatype we must declare it. If we don't declare it and try to use it, Xcode will complain telling you: **Use of unresolved identifier 'x'** (where x is the variable name).
 
 _This — by the way — is called a compilation error._
 
-In order to avoid this error, we have two ways of declaring a variable:
+This error can be avoided by declaring a variable in one of two ways:
 
 1. `let` (constant)
 2. `var` (variable)
@@ -107,7 +107,7 @@ You can define a constant variable such as pi by typing the following:
 let pi = 3.1415926
 ```
 
-Let's use pi to compute the  Earth's orbital path around the sun (approx.). The average distance between the Earth and the Sun is about 149.6 million km according to Google, so let's use that.
+Let's use pi to compute the  Earth's orbital path around the sun (approx.). The average distance between the Earth and the Sun is about 149.6 million km according to Google.
 
 ``` swift
 let distance = 149_600_000.0    // 149.6 million km
@@ -120,10 +120,12 @@ You might have noticed two interesting things about Swift in that example:
 
 - You can add `_` to numbers as separators to make it more readable.
   - _e.g. `100_000_000` as opposed to `100000000`_
-- You can print variable values using **String Interpolation**.
+- You can print variable values using **String Interpolation**. 
   - e.g. `"x has the value: \(x)"`
+  
+  // todo: If you're bothering to define 'compilation error' you should also define 'string interpolation'
 
-Additionally we added the `.0` to the distance to make it easier to multiply it with pi when both the same datatype (`Double`). If one was a whole number and the other a decimal number, Xcode would have complained. We talk about this later.
+Additionally we added the `.0` to the distance. This makes it easier to multiply it with pi because both have the same datatype (`Double`). If one was a whole number and the other a decimal number, Xcode would have complained. We talk about this later.
 
 ### Using `var`
 
