@@ -129,9 +129,9 @@ Additionally we added the `.0` to the distance. This makes it easier to multiply
 
 ### Using `var`
 
-Using the `let` keyword allows us to create constant variables, but what if we want to change the distance so that instead of the Earth, we wanted to know Mercury's orbit?
+Using the `let` keyword allows us to create constant variables, but what if we want to change the distance so that instead of the Earth, we calculate Mercury's orbit?
 
-Add these two lines below our code to calculate the Earth's orbit:
+Add these two lines below our code to calculate Mercury's orbit:
 
 ``` swift
 distance = 57_910_000.0    // 57.91 million km
@@ -152,7 +152,7 @@ If you click on this message, it will expand with a small message **Change 'let'
 
 Do this for both the `distance` and `circumference` variables and run your code.
 
-You should see both of the orbital distances travelled by the Earth and Mercury printed to the console.
+You should see both the orbital distances travelled by the Earth and Mercury printed to the console.
 
 ## Optionals
 
@@ -161,7 +161,7 @@ Optionals are used in Swift where a variable's value may be absent (`nil`).
 **Either:**
 
 - there is a value, and you have to unwrap the optional
-- or, there is is no value at all
+- there is is no value at all
 
 The `Int()` initializer returns an `Int?` instead of `Int` because it might fail to convert the `String` to a numeric value.
 
@@ -230,7 +230,7 @@ let z = Int(100.0)  // explicit
 
 ## Doubles
 
-In Swift we can represent decimal numbers — properly known as floating-point numbers — using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as as decimal values.
+In Swift we can represent decimal numbers — properly known as floating-point numbers — using the `Double` datatype. Floating-point numbers are numbers that have fractional components, colloquially referred to as decimal values.
 
 ``` swift
 let p = 1.0          // implicit
@@ -238,7 +238,7 @@ let q: Double = -2   // explicit
 let r = Double (99)  // explicit
 ```
 
-You may have noticed that Xcode does not implicitly converts numbers from type `Int` into `Double`.
+You may have noticed that Xcode does not implicitly convert numbers from type `Int` into `Double`.
 
 Try this code:
 
@@ -272,7 +272,7 @@ let yourDouble: Double = Double(yourInteger)
 
 ## Boolean
 
-In Swift we can represent boolean values using the `Bool` datatype. A boolean value can only `true` or `false`.
+In Swift we can represent boolean values using the `Bool` datatype. A boolean value can only be `true` or `false`.
 
 ``` swift
 let schoolIsFun = false
@@ -296,7 +296,7 @@ if !piGreaterThanFive {
 // Physics is fine
 ```
 
-You can see above that Since a logical operation `(pi > 5)` results in a boolean value, you can set a `Bool` equal to its result as shown above.
+Since a logical operation `(pi > 5)` results in a boolean value, you can set a `Bool` equal to its result as shown above.
 
 ## Strings
 
@@ -318,7 +318,7 @@ this is a string
 // aString and aMultiLine are both the same
 ```
 
-Sometimes you want to include special characters such as quotations in your strings; this is called escaping, and you do this by using a backslash `\` before that character you want to escape. _You will have to do this for each  character you want to escape._
+Sometimes you want to include special characters such as quotations in your strings; this is called escaping, and you do this by using a backslash `\` before the character you want to escape. _You will have to do this for each  character you want to escape._
 
 ``` swift
 let escape = "I shouted \"FREEDOM\" as I jumped out the window!"
@@ -326,7 +326,7 @@ let escape = "I shouted \"FREEDOM\" as I jumped out the window!"
 
 ### Empty Strings
 
-You can create empty strings — to be filled in later by user input or online data — in two ways (source: [Initializing an Empty String](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html)):
+You can create empty strings — to be filled in later by user input or using another source — in two ways (source: [Initializing an Empty String](https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html)):
 
 ``` swift
 var emptyString = ""               // empty string literal
@@ -334,7 +334,7 @@ var anotherEmptyString = String()  // initializer syntax
 // these two strings are both empty, and are equivalent to each other
 ```
 
-And to check if a string is empty you can use the `.isEmpty` method.
+To check if a string is empty you can use the `.isEmpty` method.
 
 ``` swift
 if emptyString.isEmpty {
@@ -354,7 +354,7 @@ print(message)
 // prints "Hello there Elon!"
 ```
 
-You can also append to the end of a string using either the `.append` method or with the `+=` operator.
+You can also append to the end of a string using either the `.append` method or the `+=` operator.
 
 ``` swift
 message.append(" Welcome")
@@ -366,6 +366,8 @@ print(message)
 ### String Interpolation
 
 Sometimes, instead of adding strings it makes more sense to insert a value into a string — this value can also be a string, but it could be an integer or another datatype.
+
+A value `value` can be interpolated in a string using the format \(`value`), as shown below.
 
 ``` swift
 let newMessage = "Hello there \(firstName)!"
@@ -436,7 +438,7 @@ for item in intArray {
 */
 ```
 
-If you need the index, you can also use the `.enumerated` method as shown, since that method returns tuples of (index, value).
+If you need the index, you can also use the `.enumerated` method as shown, since that method returns tuples (finite ordered lists) of (index, value).
 
 ``` swift
 for (index, value) in intArray.enumerated() {
